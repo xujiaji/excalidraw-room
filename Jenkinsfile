@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Docker构建') {
             steps {
-                //sh "docker rm -f 'Excalidraw-Room'"
-                //sh "docker image rm xujiaji/excalidraw-room"
+                sh "docker rm -f 'Excalidraw-Room'"
+                sh "docker image rm xujiaji/excalidraw-room"
                 sh "docker build -t xujiaji/excalidraw-room ."
             }
         }
